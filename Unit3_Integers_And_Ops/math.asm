@@ -33,12 +33,13 @@ asm_main:
         enter   0,0               ; setup routine
         pusha
 
-        mov     eax, prompt
-        call    print_string
+        mov     eax, prompt     ; setup prompt
+        call    print_string    ; print prompt
 
-        call    read_int
-        mov     [input], eax
+        call    read_int        ; get int from user
+        mov     [input], eax    ; save user input in input
 
+        ;squaring user input
         imul    eax               ; edx:eax = eax * eax
         mov     ebx, eax          ; save answer in ebx
         mov     eax, square_msg
