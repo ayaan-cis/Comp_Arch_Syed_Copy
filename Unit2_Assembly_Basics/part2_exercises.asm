@@ -56,7 +56,7 @@ asm_main:
         ; mov eax, greeting
         ; call print_string
         ; call print_nl
-        ; demp_mem 1, greeting, 0
+        ; dump_mem 1, greeting, 0
 
         ; mov eax, char_prompt
         ; call print_string
